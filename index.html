@@ -11,10 +11,8 @@
             --primary: #0f172a;
             --secondary: #1e293b;
             --accent: #0ea5e9;
-            --accent-dark: #0284c7;
             --text: #f1f5f9;
             --text-muted: #94a3b8;
-            --success: #22c55e;
         }
 
         * {
@@ -32,23 +30,14 @@
 
         /* Hero */
         .hero {
-            min-height: 100vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 70%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-            pointer-events: none;
         }
 
         .badge {
@@ -65,142 +54,52 @@
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-        }
-
         .btn {
+            display: inline-block;
             padding: 0.875rem 2rem;
             font-size: 1rem;
             font-weight: 500;
             text-decoration: none;
             border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
             border: 1px solid var(--text-muted);
             color: var(--text);
             background: transparent;
+            transition: all 0.2s ease;
         }
 
-        .btn-secondary:hover {
+        .btn:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
 
-        /* About */
-        .about {
-            padding: 5rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .about p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Features */
-        .features {
-            background: var(--secondary);
-            padding: 5rem 2rem;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background: var(--primary);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
         /* Tech */
         .tech {
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
         }
 
         .tech h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .tech-list {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
         .tech-item {
             background: var(--secondary);
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             border-radius: 8px;
             font-weight: 500;
             color: var(--accent);
@@ -225,7 +124,6 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1rem; }
         }
     </style>
 </head>
@@ -233,9 +131,7 @@
     <section class="hero">
         <div class="badge">🌊 Open Source</div>
         <h1>Watershed Project</h1>
-        <div class="cta-buttons">
-            <a href="https://github.com/ThornStreet/watershed-project" class="btn btn-secondary">View on GitHub</a>
-        </div>
+        <a href="https://github.com/ThornStreet/watershed-project" class="btn">View on GitHub</a>
     </section>
 
     <section class="tech">
